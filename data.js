@@ -67,14 +67,7 @@
         text:{
             name: "عبد الله بن مسعود"
         }
-    },	
-	omar_bin_alkhattab = {
-		HTMLclass: 'sahabi',
-        parent: muhammad,
-        text:{
-            name: "عمر بن الخطاب"
-        }
-    },	
+    },		
     obay_bin_kaab = {
         parent: muhammad,
 		HTMLclass: 'sahabi',
@@ -472,7 +465,6 @@
         zaid_bin_thabet,
         obay_bin_kaab,
 		abo_mosa_alashaari,
-		omar_bin_alkhattab,
 		ali_bin_abitaleb,
 		othman_bin_affan,
 		abdullah_bin_masood,
