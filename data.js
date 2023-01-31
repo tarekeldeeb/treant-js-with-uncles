@@ -84,7 +84,7 @@
         },
     },
     zir_bin_hubaish = {
-        parent: ali_bin_abitaleb,
+        parent: abdullah_bin_masood,
 		HTMLclass: 'tabei',
         text:{
             name: "زر بن حبيش"
@@ -126,11 +126,11 @@
         }
     },	
     abdullah_elsulami = {
-        parent: zaid_bin_thabet,
+        parent: ali_bin_abitaleb,
 		childrenDropLevel: 0,
 		HTMLclass: 'tabei',
         text:{
-            name: "عبد الله حبيب السلمي"
+            name: "أبو عبد الرحمن السُلمي"
         }
     },	
     saad_elshaibany = {
@@ -468,6 +468,54 @@
             name: "إدريس"
         },
     },
+	obaid_bin_sabbah = {
+       parent: hafs,
+       text:{
+            name: "عبيد بن الصباح"
+        },
+    },
+	ahmad_elashnani = {
+       parent: obaid_bin_sabbah,
+       text:{
+            name: "الأشناني"
+        },
+    },	
+	ali_elhashemy = {
+       parent: ahmad_elashnani,
+       text:{
+            name: "علي الهاشمي"
+        },
+    },
+	abolhasan_bin_ghalbon = {
+       parent: ali_elhashemy,
+       text:{
+            name: "أبو الحسن بن غلبون"
+        },
+    },
+	aboamr_eldani = {
+       parent: abolhasan_bin_ghalbon,
+       text:{
+            name: "أبو عمرو الداني"
+        },
+    },
+	abodawood_elomawi = {
+       parent: aboamr_eldani,
+       text:{
+            name: "أبو داود سليمان بن نجاح الأموي"
+        },
+    },
+	abolhasan_bin_hothail = {
+       parent: abodawood_elomawi,
+       text:{
+            name: "أبو الحسن بن هذيل"
+        },
+    },	
+	alshatebei = {
+       parent: abolhasan_bin_hothail,
+       text:{
+            name: "الشاطبي"
+        },
+    },	
 	
     chart_config = [
         config,
@@ -536,5 +584,14 @@
 		khalaf_bin_hesham,
 		isaac_alwarraq,
 		edrees_alhaddad,
-		
+		obaid_bin_sabbah ,
+		ahmad_elashnani ,	
+		ali_elhashemy,
+		abolhasan_bin_ghalbon,
+		aboamr_eldani, 
+		abodawood_elomawi,
+		abolhasan_bin_hothail,	
+		alshatebei, 		
     ];
+
+
