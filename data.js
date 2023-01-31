@@ -39,7 +39,7 @@
     zaid_bin_thabet = {
         parent: muhammad,
 		HTMLclass: 'sahabi',
-		childrenDropLevel: 0,
+		childrenDropLevel: 1,
         text:{
             name: "زيد بن ثابت"
         }
@@ -78,18 +78,21 @@
 	abo_mosa_alashaari = {
         parent: muhammad,
 		HTMLclass: 'sahabi',
+		childrenDropLevel: 1,
         text:{
             name: "أبو موسى الأشعري"
         },
     },
     zir_bin_hubaish = {
         parent: ali_bin_abitaleb,
+		HTMLclass: 'tabei',
         text:{
             name: "زر بن حبيش"
         }
     },
     eldoali = {
         parent: ali_bin_abitaleb,
+		HTMLclass: 'tabei',
         text:{
             name: "أبو الأسود الدؤلي"
         }
@@ -110,6 +113,7 @@
     },
 	derbas_mawla_bin_abbas = {
         parent: abdullah_bin_abbas,
+		HTMLclass: 'tabei',
         text:{
             name: "درباس مولى بن عباس"
         }
@@ -123,14 +127,15 @@
     },	
     abdullah_elsulami = {
         parent: zaid_bin_thabet,
-		childrenDropLevel: 1,
-		HTMLclass: 'sahabi',
+		childrenDropLevel: 0,
+		HTMLclass: 'tabei',
         text:{
             name: "عبد الله حبيب السلمي"
         }
     },	
     saad_elshaibany = {
         parent: abdullah_bin_masood,
+		HTMLclass: 'tabei',
         text:{
             name: "سعد بن إياس الشيباني"
         },
@@ -159,18 +164,20 @@
     },
 	alaaraj = {
         parent: abo_horaira,
+		HTMLclass: 'tabei',
         text:{
             name: "الأعرج"
         },
     },
 	abo_gaafar_almadani_pseudo = {
         parent: abdullah_bin_abbas,
+		childrenDropLevel: 1,
 		pseudo: true,
     },
 	abo_gaafar_almadani = {
         parent: abo_gaafar_almadani_pseudo,
 		HTMLclass: 'qari10',
-		childrenDropLevel: 2,
+		childrenDropLevel: 1,
         text:{
             name: "أبو جعفر المدني"
         },
@@ -247,6 +254,7 @@
     },
 	saeed_bin_jubair = {
         parent: abdullah_bin_abbas,
+		HTMLclass: 'tabei',
         text:{
             name: "سعيد بن جبير"
         },
@@ -281,6 +289,7 @@
     },
     almogheera_bin_abi_shehab = {
         parent: othman_bin_affan,
+		HTMLclass: 'tabei',
         text:{
             name: "المغيرة بن أبي شهاب"
         },
@@ -320,12 +329,14 @@
     },
 	ibn_abi_laila = {
         parent: ali_bin_abitaleb,
+		HTMLclass: 'tabei',
         text:{
             name: "ابن أبي ليلى"
         },
     },
 	alaamash = {
         parent: abdullah_bin_masood,
+		HTMLclass: 'tabei',
         text:{
             name: "الأعمش"
         },
@@ -402,21 +413,22 @@
     },
 	omran_bin_melhan = {
         parent: abo_mosa_alashaari,
- 		HTMLclass: 'sahabi',
+ 		HTMLclass: 'tabei',
+		childrenDropLevel: 1,
         text:{
             name: "عمران بن ملحان"
         },
     },
 	abo_elashhab_elatared = {
         parent: omran_bin_melhan,
-       text:{
+        text:{
             name: "أبو الأشهب العطارد"
         },
     },
 	yaaqoob_elhadrami = {
         parent: abo_elashhab_elatared,
  		HTMLclass: 'qari10',
-		childrenDropLevel: 2,
+		childrenDropLevel: 0,
        text:{
             name: "يعقوب الحضرمي"
         },
