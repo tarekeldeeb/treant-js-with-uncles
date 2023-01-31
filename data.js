@@ -127,6 +127,7 @@
     },	
     abdullah_elsulami = {
         parent: ali_bin_abitaleb,
+        uncles: [obay_bin_kaab, abdullah_bin_masood],
 		childrenDropLevel: 0,
 		HTMLclass: 'tabei',
         text:{
