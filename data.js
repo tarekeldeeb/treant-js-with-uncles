@@ -152,6 +152,7 @@
     hafs = {
         parent: assem,
  		HTMLclass: 'rawi',
+        collapsed: true,
         text:{
             name: "حفص"
         }
@@ -159,6 +160,7 @@
     shoba = {
         parent: assem,
  		HTMLclass: 'rawi',
+        collapsed: true,
         text:{
             name: "شعبة"
         },
@@ -186,6 +188,7 @@
 	ibn_werdan = {
         parent: abo_gaafar_almadani,
 		HTMLclass: 'rawi',
+        collapsed: true,
         text:{
             name: "ابن وردان"
         },
@@ -193,6 +196,7 @@
 	ibn_jumaz = {
         parent: abo_gaafar_almadani,
 		HTMLclass: 'rawi',
+        collapsed: true,
         text:{
             name: "ابن جماز"
         },
@@ -208,14 +212,16 @@
 	qaloon = {
         parent: nafee,
  		HTMLclass: 'rawi',
-        text:{
+         collapsed: true,
+         text:{
             name: "قالون"
         },
     },
 	warsh = {
         parent: nafee,
  		HTMLclass: 'rawi',
-        text:{
+         collapsed: true,
+         text:{
             name: "ورش"
         },
     },
@@ -236,7 +242,8 @@
 	konbol = {
         parent: ahmad_alnabbal,
  		HTMLclass: 'rawi',
-        text:{
+         collapsed: true,
+         text:{
             name: "قنبل"
         },
     },
@@ -249,7 +256,8 @@
 	albazzei = {
         parent: ekrema_bin_soliman,
  		HTMLclass: 'rawi',
-        text:{
+         collapsed: true,
+         text:{
             name: "البزي"
         },
     },
@@ -277,14 +285,16 @@
 	eldoori = {
         parent: yahia_ibn_almubarak,
  		HTMLclass: 'rawi',
-        text:{
+         collapsed: true,
+         text:{
             name: "الدوري"
         },
     },
 	elsoosi = {
         parent: yahia_ibn_almubarak,
  		HTMLclass: 'rawi',
-        text:{
+         collapsed: true,
+         text:{
             name: "السوسي"
         },
     },
@@ -317,14 +327,16 @@
     hisham_bin_ammar = {
         parent: ayoub_bin_tameem,
  		HTMLclass: 'rawi',
-        text:{
+         collapsed: true,
+         text:{
             name: "هشام"
         },
     },	
 	ibn_thakwan = {
         parent: ayoub_bin_tameem,
  		HTMLclass: 'rawi',
-        text:{
+         collapsed: true,
+         text:{
             name: "ابن ذكوان"
         },
     },
@@ -363,7 +375,8 @@
 	khalaf = {
         parent: khalaf_pseudo,
  		HTMLclass: 'rawi',
-        text:{
+         collapsed: true,
+         text:{
             name: "خلف"
         },
     },
@@ -374,7 +387,8 @@
 	khallad = {
         parent: khallad_pseudo,
  		HTMLclass: 'rawi',
-        text:{
+         collapsed: true,
+         text:{
             name: "خلاد"
         },
     },	
@@ -401,14 +415,16 @@
 	abo_elharith = {
         parent: alkasaaei,
  		HTMLclass: 'rawi',
-        text:{
+         collapsed: true,
+         text:{
             name: "أبو الحارث"
         },
     },
 	hafs_eldoori = {
         parent: alkasaaei,
  		HTMLclass: 'rawi',
-       text:{
+         collapsed: true,
+         text:{
             name: "الدوري"
         },
     },
@@ -437,14 +453,16 @@
 	rooh = {
         parent: yaaqoob_elhadrami,
  		HTMLclass: 'rawi',
-       text:{
+         collapsed: true,
+         text:{
             name: "روح"
         },
     },
 	rowais = {
         parent: yaaqoob_elhadrami,
  		HTMLclass: 'rawi',
-       text:{
+         collapsed: true,
+         text:{
             name: "رويس"
         },
     },
@@ -458,14 +476,16 @@
 	isaac_alwarraq = {
         parent: khalaf_bin_hesham,
  		HTMLclass: 'rawi',
-       text:{
+         collapsed: true,
+         text:{
             name: "إسحاق"
         },
     },	
 	edrees_alhaddad = {
         parent: khalaf_bin_hesham,
  		HTMLclass: 'rawi',
-       text:{
+         collapsed: true,
+         text:{
             name: "إدريس"
         },
     },
