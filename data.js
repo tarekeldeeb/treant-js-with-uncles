@@ -1,6 +1,5 @@
     var config = {
         container: "#sanad",
-
         animateOnInit: true,
         
         node: {
@@ -14,15 +13,15 @@
         }
     },
     allah = {
-		HTMLclass: 'wahi',
+	HTMLclass:  'wahi',
         text: {
             name: "رب العزة",
         },
         image: "pix/1.png"
-	},
+    },
     jebril = {
         parent: allah,
-		HTMLclass: 'wahi',
+	HTMLclass:  'wahi',
         text:{
             name: "جبريل",
         },
@@ -30,7 +29,7 @@
     },
     muhammad = {
         parent: jebril,
-		HTMLclass: 'wahi',
+	HTMLclass:  'wahi',
         text:{
             name: "رسول الله",
         },
@@ -38,89 +37,89 @@
     },
     zaid_bin_thabet = {
         parent: muhammad,
-		HTMLclass: 'sahabi',
-		childrenDropLevel: 1,
+	HTMLclass:  'sahabi',
+	childrenDropLevel: 1,
         text:{
             name: "زيد بن ثابت"
         }
     },
     ali_bin_abitaleb = {
         parent: muhammad,
-		HTMLclass: 'sahabi',
-		childrenDropLevel: 1,
+	HTMLclass:  'sahabi',
+	childrenDropLevel: 1,
         text:{
             name: "علي بن أبي طالب"
         }
     },
     othman_bin_affan = {
         parent: muhammad,
-		HTMLclass: 'sahabi',
-		childrenDropLevel: 1,
+	HTMLclass:  'sahabi',
+	childrenDropLevel: 1,
         text:{
             name: "عثمان بن عفان"
         }
     },
     abdullah_bin_masood = {
         parent: muhammad,
-		HTMLclass: 'sahabi',
-		childrenDropLevel: 1,
+	HTMLclass:  'sahabi',
+	childrenDropLevel: 1,
         text:{
             name: "عبد الله بن مسعود"
         }
     },		
     obay_bin_kaab = {
         parent: muhammad,
-		HTMLclass: 'sahabi',
+	HTMLclass:  'sahabi',
         text:{
             name: "أبي بن كعب"
         },
     },
 	abo_mosa_alashaari = {
         parent: muhammad,
-		HTMLclass: 'sahabi',
-		childrenDropLevel: 1,
+	HTMLclass:  'sahabi',
+	childrenDropLevel: 1,
         text:{
             name: "أبو موسى الأشعري"
         },
     },
     zir_bin_hubaish = {
         parent: abdullah_bin_masood,
-		HTMLclass: 'tabei',
+	HTMLclass:  'tabei',
         text:{
             name: "زر بن حبيش"
         }
     },
     eldoali = {
         parent: ali_bin_abitaleb,
-		HTMLclass: 'tabei',
+	HTMLclass:  'tabei',
         text:{
             name: "أبو الأسود الدؤلي"
         }
     },	
     abo_horaira = {
         parent: obay_bin_kaab,
-		HTMLclass: 'sahabi',
+	HTMLclass:  'sahabi',
         text:{
             name: "أبو هريرة"
         }
     },
     abdullah_bin_abbas = {
         parent: obay_bin_kaab,
-		HTMLclass: 'sahabi',
+	HTMLclass:  'sahabi',
         text:{
             name: "عبد الله بن عباس"
         }
     },
 	derbas_mawla_bin_abbas = {
         parent: abdullah_bin_abbas,
-		HTMLclass: 'tabei',
+	HTMLclass:  'tabei',
         text:{
             name: "درباس مولى بن عباس"
         }
     },
     abdullah_bin_abi_ayyash = {
         parent: obay_bin_kaab,
-		HTMLclass: 'sahabi',
+	HTMLclass: 'sahabi',
         text:{
             name: "عبد الله بن أبي عياش"
         }
@@ -128,107 +127,103 @@
     abdullah_elsulami = {
         parent: ali_bin_abitaleb,
         uncles: [obay_bin_kaab, abdullah_bin_masood],
-		childrenDropLevel: 0,
-		HTMLclass: 'tabei',
+	childrenDropLevel: 0,
+	HTMLclass: 'tabei',
         text:{
             name: "أبو عبد الرحمن السُلمي"
         }
     },	
     saad_elshaibany = {
         parent: abdullah_bin_masood,
-		HTMLclass: 'tabei',
+	HTMLclass: 'tabei',
         text:{
             name: "سعد بن إياس الشيباني"
         },
     },
     assem = {
         parent: abdullah_elsulami,
-		childrenDropLevel: 2,
-		HTMLclass: 'qari7',
+	childrenDropLevel: 2,
+	HTMLclass: 'qari7',
         text:{
             name: "عاصم بن أبي النجود"
         }
     },
     hafs = {
         parent: assem,
- 		HTMLclass: 'rawi',
-        collapsed: true,
+	HTMLclass: 'rawi',
         text:{
             name: "حفص"
         }
     },	
     shoba = {
         parent: assem,
- 		HTMLclass: 'rawi',
-        collapsed: true,
+	HTMLclass: 'rawi',
         text:{
             name: "شعبة"
         },
     },
 	alaaraj = {
         parent: abo_horaira,
-		HTMLclass: 'tabei',
+	HTMLclass:  'tabei',
         text:{
             name: "الأعرج"
         },
     },
 	abo_gaafar_almadani_pseudo = {
         parent: abdullah_bin_abbas,
-		childrenDropLevel: 1,
+	childrenDropLevel: 1,
 		pseudo: true,
     },
 	abo_gaafar_almadani = {
         parent: abo_gaafar_almadani_pseudo,
-		HTMLclass: 'qari10',
-		childrenDropLevel: 1,
+	HTMLclass:  'qari10',
+	childrenDropLevel: 1,
         text:{
             name: "أبو جعفر المدني"
         },
     },
 	ibn_werdan = {
         parent: abo_gaafar_almadani,
-		HTMLclass: 'rawi',
-        collapsed: true,
+	HTMLclass:  'rawi',
         text:{
             name: "ابن وردان"
         },
     },
 	ibn_jumaz = {
         parent: abo_gaafar_almadani,
-		HTMLclass: 'rawi',
-        collapsed: true,
+	HTMLclass:  'rawi',
         text:{
             name: "ابن جماز"
         },
     },
 	nafee = {
         parent: alaaraj,
-		childrenDropLevel: 2,
-		HTMLclass: 'qari7',
+	childrenDropLevel: 2,
+	HTMLclass:  'qari7',
         text:{
             name: "نافع المدني"
         },
     },
 	qaloon = {
         parent: nafee,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "قالون"
         },
     },
 	warsh = {
         parent: nafee,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "ورش"
         },
     },
 	ibn_katheer = {
         parent: derbas_mawla_bin_abbas,
-		childrenDropLevel: 1,
-		HTMLclass: 'qari7',
+	childrenDropLevel: 1,
+	HTMLclass:  'qari7',
         text:{
             name: "ابن كثير المكي"
         },
@@ -241,8 +236,8 @@
     },	
 	konbol = {
         parent: ahmad_alnabbal,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "قنبل"
         },
@@ -255,23 +250,23 @@
     },
 	albazzei = {
         parent: ekrema_bin_soliman,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "البزي"
         },
     },
 	saeed_bin_jubair = {
         parent: abdullah_bin_abbas,
-		HTMLclass: 'tabei',
+	HTMLclass:  'tabei',
         text:{
             name: "سعيد بن جبير"
         },
     },
 	abi_amr = {
         parent: saeed_bin_jubair,
-		HTMLclass: 'qari7',
-		childrenDropLevel: 1,
+	HTMLclass:  'qari7',
+	childrenDropLevel: 1,
         text:{
             name: "أبي عمرو البصري"
         },
@@ -284,29 +279,29 @@
     },
 	eldoori = {
         parent: yahia_ibn_almubarak,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "الدوري"
         },
     },
 	elsoosi = {
         parent: yahia_ibn_almubarak,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "السوسي"
         },
     },
     almogheera_bin_abi_shehab = {
         parent: othman_bin_affan,
-		HTMLclass: 'tabei',
+	HTMLclass:  'tabei',
         text:{
             name: "المغيرة بن أبي شهاب"
         },
     },
 	ibn_amer_elshamy = {
-		HTMLclass: 'qari7',
+	HTMLclass:  'qari7',
         parent: almogheera_bin_abi_shehab,
         text:{
             name: "ابن عامر الشامي"
@@ -326,44 +321,44 @@
     },
     hisham_bin_ammar = {
         parent: ayoub_bin_tameem,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "هشام"
         },
     },	
 	ibn_thakwan = {
         parent: ayoub_bin_tameem,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "ابن ذكوان"
         },
     },
 	ibn_abi_laila = {
         parent: ali_bin_abitaleb,
-		HTMLclass: 'tabei',
+	HTMLclass:  'tabei',
         text:{
             name: "ابن أبي ليلى"
         },
     },
 	alaamash = {
         parent: abdullah_bin_masood,
-		HTMLclass: 'tabei',
+	HTMLclass:  'tabei',
         text:{
             name: "الأعمش"
         },
     },	
 	hamza = {
         parent: alaamash,
-		HTMLclass: 'qari7',
+	HTMLclass:  'qari7',
         text:{
             name: "حمزة الكوفي"
         },
     },	
 	solaim = {
         parent: hamza,
-		childrenDropLevel: 0,
+	childrenDropLevel: 0,
         text:{
             name: "سليم بن عيسى"
         },
@@ -374,8 +369,8 @@
 	},	
 	khalaf = {
         parent: khalaf_pseudo,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "خلف"
         },
@@ -386,8 +381,8 @@
 	},		
 	khallad = {
         parent: khallad_pseudo,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "خلاد"
         },
@@ -406,32 +401,32 @@
     },		
 	alkasaaei = {
         parent: hamza,
-		HTMLclass: 'qari7',
-		childrenDropLevel: 1,
+	HTMLclass:  'qari7',
+	childrenDropLevel: 1,
         text:{
             name: "الكسائي"
         },
     },	
 	abo_elharith = {
         parent: alkasaaei,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "أبو الحارث"
         },
     },
 	hafs_eldoori = {
         parent: alkasaaei,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "الدوري"
         },
     },
 	omran_bin_melhan = {
         parent: abo_mosa_alashaari,
- 		HTMLclass: 'tabei',
-		childrenDropLevel: 1,
+	HTMLclass: 'tabei',
+	childrenDropLevel: 1,
         text:{
             name: "عمران بن ملحان"
         },
@@ -444,47 +439,47 @@
     },
 	yaaqoob_elhadrami = {
         parent: abo_elashhab_elatared,
- 		HTMLclass: 'qari10',
-		childrenDropLevel: 0,
+	HTMLclass: 'qari10',
+	childrenDropLevel: 0,
        text:{
             name: "يعقوب الحضرمي"
         },
     },
 	rooh = {
         parent: yaaqoob_elhadrami,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "روح"
         },
     },
 	rowais = {
         parent: yaaqoob_elhadrami,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "رويس"
         },
     },
 	khalaf_bin_hesham = {
         parent: solaim,
- 		HTMLclass: 'qari10',
+	HTMLclass: 'qari10',
        text:{
             name: "خلف بن هشام"
         },
     },
 	isaac_alwarraq = {
         parent: khalaf_bin_hesham,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "إسحاق"
         },
     },	
 	edrees_alhaddad = {
         parent: khalaf_bin_hesham,
- 		HTMLclass: 'rawi',
-         collapsed: true,
+	HTMLclass: 'rawi',
+ 
          text:{
             name: "إدريس"
         },
@@ -614,5 +609,4 @@
 		abolhasan_bin_hothail,	
 		alshatebei, 		
     ];
-
 
