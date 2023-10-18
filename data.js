@@ -92,7 +92,8 @@
     },
     zir_bin_hubaish = {
         parent: abdullah_bin_masood,
-	HTMLclass:  'tabei',
+	    HTMLclass:  'tabei',
+        uncles: [ali_bin_abitaleb],
         text:{
             name: "زر بن حبيش"
         }
@@ -134,7 +135,7 @@
     },	
     abdullah_elsulami = {
         parent: ali_bin_abitaleb,
-        uncles: [obay_bin_kaab, abdullah_bin_masood],
+        uncles: [obay_bin_kaab, abdullah_bin_masood, othman_bin_affan, zaid_bin_thabet],
 	childrenDropLevel: 0,
 	HTMLclass: 'tabei',
         text:{
@@ -172,20 +173,23 @@
     },
 	alaaraj = {
         parent: abo_horaira,
-	HTMLclass:  'tabei',
+	    HTMLclass:  'tabei',
+        childrenDropLevel: 1,
+        uncles: [abdullah_bin_abbas, abdullah_bin_abi_ayyash],
         text:{
             name: "الأعرج"
         },
     },
 	abo_gaafar_almadani_pseudo = {
         parent: abdullah_bin_abbas,
-	childrenDropLevel: 1,
+	childrenDropLevel: 0,
 		pseudo: true,
     },
 	abo_gaafar_almadani = {
         parent: abo_gaafar_almadani_pseudo,
-	HTMLclass:  'qari10',
-	childrenDropLevel: 1,
+	    HTMLclass:  'qari10',
+        uncles:[abdullah_bin_abi_ayyash, abo_horaira],
+	    childrenDropLevel: 2,
         text:{
             name: "أبو جعفر المدني"
         },
@@ -206,7 +210,8 @@
     },
 	nafee = {
         parent: alaaraj,
-	childrenDropLevel: 2,
+	childrenDropLevel: 1,
+    uncles: [abo_gaafar_almadani],
 	HTMLclass:  'qari7',
         text:{
             name: "نافع المدني"
@@ -359,7 +364,8 @@
     },	
 	hamza = {
         parent: alaamash,
-	HTMLclass:  'qari7',
+	    HTMLclass:  'qari7',
+        uncles: [ibn_abi_laila],
         text:{
             name: "حمزة الكوفي"
         },
@@ -435,6 +441,7 @@
         parent: abo_mosa_alashaari,
 	HTMLclass: 'tabei',
 	childrenDropLevel: 1,
+    uncles:[abdullah_bin_abbas],
         text:{
             name: "عمران بن ملحان"
         },
