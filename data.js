@@ -66,6 +66,14 @@
         text:{
             name: "عبد الله بن مسعود"
         }
+    },
+    abuldardaa = {
+        parent: muhammad,
+	    HTMLclass:  'sahabi',
+	    childrenDropLevel: 1,
+        text:{
+            name: "أبو الدرداء"
+        }
     },		
     obay_bin_kaab = {
         parent: muhammad,
@@ -545,6 +553,7 @@
 		othman_bin_affan,
 		abdullah_bin_masood,
 		abo_horaira,
+        abuldardaa,
 		abdullah_bin_abbas,
 		abdullah_bin_abi_ayyash,
 		zir_bin_hubaish,
