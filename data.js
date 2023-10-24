@@ -82,7 +82,7 @@
             name: "أبي بن كعب"
         },
     },
-	abo_mosa_alashaari = {
+    abo_mosa_alashaari = {
         parent: muhammad,
 	HTMLclass:  'sahabi',
 	childrenDropLevel: 1,
@@ -114,6 +114,7 @@
     },
     abdullah_bin_abbas = {
         parent: obay_bin_kaab,
+	uncles: [zaid_bin_thabet],
 	HTMLclass:  'sahabi',
         text:{
             name: "عبد الله بن عباس"
