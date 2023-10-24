@@ -10,16 +10,16 @@ abbr,acronym { border:0; }
 body { background: #fff; }
 /* optional Container STYLES */
 .chart { margin: 5px; width: 1860px; }
-.Treant > .node { padding: 3px; border: 1px solid #484848; border-radius: 3px; }
+.Treant > .node { padding: 3px; border: 1px solid #484848; border-radius: 3px;  background-color: #FFF;}
 .Treant > .node img { width: 30px; height: 30px; float:right; }
 
 .Treant .collapse-switch { width: 100%; height: 100%; border: none; }
-.Treant .node.collapsed { background-color: #DEF82D; }
+.Treant .node.collapsed { background-color: #DEF82D !important; }
 .Treant .node.collapsed .collapse-switch { background: none; }
 
-.wahi   { background-color: #96f794;}
-.sahabi { background-color: #baffc1;}
-.tabei  { background-color: #f7ffba;}
-.qari7  { background-color: #a8d5f7;}
-.qari10 { background-color: #c4e6ff;}
-.rawi   { background-color: #f7e1e5;}
+.wahi   { background-color: #96f794 !important;}
+.sahabi { background-color: #baffc1 !important;}
+.tabei  { background-color: #f7ffba !important;}
+.qari7  { background-color: #a8d5f7 !important;}
+.qari10 { background-color: #c4e6ff !important;}
+.rawi   { background-color: #f7e1e5 !important;}
