@@ -1,8 +1,31 @@
 <div class="container">
-    <p>
-        Basic Popover Chart: supports single-click, double-click, and drag-drop (swap nodes) events.
-        Also, supports Add and Remove nodes using popovers.
-    </p>
+    <div class="instructions" style="right: 0;">
+        يمكنك إضافة إجازتك للقران لهذا المشروع عن طريق: <br />
+        <ol style="padding: 10px 20px 0 0;">
+            <li>اختيار أخفض فرع تحت الراوي</li>
+            <li>انقر على أضف قارئ ثم املأ بياناتك</li>
+            <li>انقر على ارفع البيانات بعد التأكد من صحتها</li>
+            <li>سيظهر رابط بطلبك، سيتم مراجعته ثم نشره  خلال 3 ايام عمل ان شاء الله</li>
+        </ol>
+    </div>
+
+    <div class="instructions" style="right: 360px;">
+        مفتاح الشجرة: <br /><br />
+        <table style="width: 100%;">
+            <tr>
+              <td>
+                <div class="wahi">كل متصل بوحي</div>
+                <div class="sahabi">صحابي</div>
+                <div class="tabei">تابعي</div>
+              </td>
+              <td>
+                <div class="qari7">القرّاء السبعة</div>
+                <div class="qari10">تتمة القرّاء العشرة</div>
+                <div class="rawi">راوي</div>
+              </td>
+            </tr>
+          </table>
+    </div>
 
     <ngx-treant-chart
         *ngIf="displayChart"

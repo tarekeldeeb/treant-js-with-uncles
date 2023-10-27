@@ -1,5 +1,15 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0; direction:rtl;font-family: "Amiri"; font-size: 16px;}
-table { border-collapse:collapse; border-spacing:0; }
+.container{max-width: 100%;}
+.instructions {
+    display: block;
+    text-align: right;
+    width: 326px;
+    background-color: cornsilk;
+    padding: 25px;
+    margin: 25px;
+    position: absolute;
+    border-radius: 10px;
+}
 fieldset,img { border:0; }
 address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
 caption,th { text-align:right; }
@@ -10,7 +20,7 @@ abbr,acronym { border:0; }
 body { background: #fff; }
 /* optional Container STYLES */
 .basic-popover-chart {
-    margin: 5px; width: 1860px;
+    margin: 5px; width: 1650px;
 }
 
 

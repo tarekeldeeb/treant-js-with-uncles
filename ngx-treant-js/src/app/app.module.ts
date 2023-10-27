@@ -6,15 +6,14 @@ import { AppComponent } from './app.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { BasicPopoverComponent } from './demo-charts/basic-popover/basic-popover.component';
-import { HomeChartsComponent } from './demo-charts/home/home-charts.component';
 import { NgxTreantJsModule } from '@ahmed757/ngx-treant-js';
 import { ModalModule } from 'ngx-bootstrap/modal';
+//import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
     declarations: [
         AppComponent,
         BasicPopoverComponent,
-        HomeChartsComponent,
     ],
     imports: [
         BrowserModule,
@@ -22,6 +21,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
         NgxTreantJsModule,
         ReactiveFormsModule,
         ModalModule.forRoot(),
+        //MatIconModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
