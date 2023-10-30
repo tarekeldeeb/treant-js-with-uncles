@@ -13,7 +13,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/angular-treant-demo",
+                        "outputPath": "dist",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -21,8 +21,8 @@
                         "aot": true,
                         "assets": ["src/favicon.ico", "src/assets"],
                         "styles": [
-                            "node_modules/treant-js/Treant.css",
-                            "node_modules/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.css",
+                            "../lib/treant-js/Treant.css",
+                            "../lib/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.css",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "src/styles.css"
                         ],
@@ -30,11 +30,11 @@
                             "node_modules/jquery/dist/jquery.min.js",
                             "node_modules/popper.js/dist/umd/popper.js",
                             "node_modules/bootstrap/dist/js/bootstrap.js",
-                            "node_modules/treant-js/vendor/jquery.easing.js",
-                            "node_modules/treant-js/vendor/jquery.mousewheel.js",
-                            "node_modules/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.js",
-                            "node_modules/treant-js/vendor/raphael.js",
-                            "node_modules/treant-js/Treant.js"
+                            "../lib/treant-js/vendor/jquery.easing.js",
+                            "../lib/treant-js/vendor/jquery.mousewheel.js",
+                            "../lib/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.js",
+                            "../lib/treant-js/vendor/raphael.js",
+                            "../lib/treant-js/Treant.js"
                         ]
                     },
                     "configurations": {
@@ -94,8 +94,8 @@
                         "karmaConfig": "karma.conf.js",
                         "assets": ["src/favicon.ico", "src/assets"],
                         "styles": [
-                            "node_modules/treant-js/Treant.css",
-                            "node_modules/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.css",
+                            "../lib/treant-js/Treant.css",
+                            "../lib/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.css",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "src/styles.css"
                         ],
@@ -103,11 +103,11 @@
                             "node_modules/jquery/dist/jquery.min.js",
                             "node_modules/popper.js/dist/umd/popper.js",
                             "node_modules/bootstrap/dist/js/bootstrap.js",
-                            "node_modules/treant-js/vendor/jquery.easing.js",
-                            "node_modules/treant-js/vendor/jquery.mousewheel.js",
-                            "node_modules/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.js",
-                            "node_modules/treant-js/vendor/raphael.js",
-                            "node_modules/treant-js/Treant.js"
+                            "../lib/treant-js/vendor/jquery.easing.js",
+                            "../lib/treant-js/vendor/jquery.mousewheel.js",
+                            "../lib/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.js",
+                            "../lib/treant-js/vendor/raphael.js",
+                            "../lib/treant-js/Treant.js"
                         ]
                     }
                 },

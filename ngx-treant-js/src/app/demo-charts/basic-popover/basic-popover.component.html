@@ -48,7 +48,7 @@
 
 <ng-template #template>
     <div class="modal-header">
-        <h4 class="modal-title pull-left">New Employee</h4>
+        <h4 class="modal-title pull-left">أضف إجازتك</h4>
         <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -56,46 +56,46 @@
     <div class="modal-body">
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
-                <label for="name">Name (required)</label>
+                <label for="name">الاسم (اجباري)</label>
                 <input
                     type="text"
                     class="form-control"
                     id="name"
                     formControlName="name"
-                    placeholder="Enter name"
+                    placeholder="أدخل الاسم كما في الإجازة"
                 />
             </div>
             <div class="form-group">
-                <label for="title">Title</label>
+                <label for="title">المسمى الوظيفي</label>
                 <input
                     type="text"
                     class="form-control"
                     id="title"
                     formControlName="title"
-                    placeholder="Enter title"
+                    placeholder="أدخل المسمى الوظيفي"
                 />
             </div>
             <div class="form-group">
-                <label for="contact">Contact</label>
+                <label for="contact">العنوان</label>
                 <input
                     type="text"
                     class="form-control"
                     id="contact"
                     formControlName="contact"
-                    placeholder="Enter contact"
+                    placeholder="أدخل العنوان الاكتروني (ايميل)"
                 />
             </div>
             <div class="form-group">
-                <label for="image">Image path or link</label>
+                <label for="image">صورة الإجازة</label>
                 <input
                     type="text"
                     class="form-control"
                     id="image"
                     formControlName="image"
-                    placeholder="e.g. http://gallary/imgs/malory.png"
+                    placeholder="أدخل رابط صورة الإجازة مثلا: http://gallary/imgs/malory.png"
                 />
             </div>
-            <button type="submit" class="btn btn-primary" [disabled]="!f.name.value">Add</button>
+            <button type="submit" class="btn btn-primary" [disabled]="!f.name.value">أضف</button>
         </form>
     </div>
 </ng-template>

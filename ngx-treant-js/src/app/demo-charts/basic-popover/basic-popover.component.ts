@@ -38,11 +38,11 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     private content = `
            <div class="popover-content">
               <div class="btn-group mr-2" role="group">
-                  <a type="button" class="btn btn-primary btn-sm" title="Add child node" id="add" href="#">Add New</a>
+                  <a type="button" class="btn btn-primary btn-sm" title="Add child node" id="add" href="#">أضف إجازتك</a>
               </div>
-              <div class="btn-group mr-2" role="group">
+              <!--<div class="btn-group mr-2" role="group">
                   <a type="button" class="btn btn-danger btn-sm" title="Remove this node" id="delete" href="#">Remove</a>
-              </div>
+              </div> -->
           </div>
       `;
 
