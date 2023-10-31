@@ -81,7 +81,7 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     }
 
     onSubmit() {
-        const node = this.flatNodes.find((n) => n.id == this.node.id);
+        const node = this.nodes.find((n) => n.id == this.node.id);
         const hasChildren = !!node.children && !!node.children.length;
 
         const newEmployee = {
