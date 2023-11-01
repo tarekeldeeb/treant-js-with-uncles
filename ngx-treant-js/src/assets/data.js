@@ -1,3 +1,14 @@
+var nonly = function(c){
+    const allowed = ['text', 'name'];
+    const filtered = Object.keys(c)
+      .filter(key => allowed.includes(key))
+      .reduce((obj, key) => {
+        obj[key] = c[key];
+        return obj;
+      }, {});
+    return filtered;
+    }
+    
     var config = {
         container: "#basic-popover",
         animateOnInit: true,
@@ -93,7 +104,7 @@
     zir_bin_hubaish = {
         parent: abdullah_bin_masood,
 	    HTMLclass:  'tabei',
-        uncles: [ali_bin_abitaleb],
+        uncles: [nonly(ali_bin_abitaleb)],
         text:{
             name: "زر بن حبيش"
         }
@@ -114,7 +125,7 @@
     },
     abdullah_bin_abbas = {
         parent: obay_bin_kaab,
-	uncles: [zaid_bin_thabet],
+	uncles: [nonly(zaid_bin_thabet)],
 	HTMLclass:  'sahabi',
         text:{
             name: "عبد الله بن عباس"
@@ -136,7 +147,7 @@
     },	
     abdullah_elsulami = {
         parent: ali_bin_abitaleb,
-        uncles: [obay_bin_kaab, abdullah_bin_masood, othman_bin_affan, zaid_bin_thabet],
+        uncles: [nonly(obay_bin_kaab), nonly(abdullah_bin_masood), nonly(othman_bin_affan), nonly(zaid_bin_thabet)],
 	childrenDropLevel: 0,
 	HTMLclass: 'tabei',
         text:{
@@ -176,7 +187,7 @@
         parent: abo_horaira,
 	    HTMLclass:  'tabei',
         childrenDropLevel: 1,
-        uncles: [abdullah_bin_abbas, abdullah_bin_abi_ayyash],
+        uncles: [nonly(abdullah_bin_abbas), nonly(abdullah_bin_abi_ayyash)],
         text:{
             name: "الأعرج"
         },
@@ -189,7 +200,7 @@
 	abo_gaafar_almadani = {
         parent: abo_gaafar_almadani_pseudo,
 	    HTMLclass:  'qari10',
-        uncles:[abdullah_bin_abi_ayyash, abo_horaira],
+        uncles:[nonly(abdullah_bin_abi_ayyash), nonly(abo_horaira)],
 	    childrenDropLevel: 2,
         text:{
             name: "أبو جعفر المدني"
@@ -212,7 +223,7 @@
 	nafee = {
         parent: alaaraj,
 	childrenDropLevel: 1,
-    uncles: [abo_gaafar_almadani],
+    uncles: [nonly(abo_gaafar_almadani)],
 	HTMLclass:  'qari7',
         text:{
             name: "نافع المدني"
@@ -366,7 +377,7 @@
 	hamza = {
         parent: alaamash,
 	    HTMLclass:  'qari7',
-        uncles: [ibn_abi_laila],
+        uncles: [nonly(ibn_abi_laila)],
         text:{
             name: "حمزة الكوفي"
         },
@@ -442,7 +453,7 @@
         parent: abo_mosa_alashaari,
 	HTMLclass: 'tabei',
 	childrenDropLevel: 1,
-    uncles:[abdullah_bin_abbas],
+    uncles:[nonly(abdullah_bin_abbas)],
         text:{
             name: "عمران بن ملحان"
         },
