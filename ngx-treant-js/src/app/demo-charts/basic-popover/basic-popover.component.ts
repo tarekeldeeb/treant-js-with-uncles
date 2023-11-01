@@ -81,28 +81,30 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     }
 
     onSubmit() {
+
+        //(window as any).tree.addNode({'id':this.node.id}, {'text':{'name':"TESTT"}});
         const node = this.nodes.find((n) => n.id == this.node.id);
         const hasChildren = !!node.children && !!node.children.length;
-
-        const newEmployee = {
+        let nodeChildren = (hasChildren)? node.children:[];
+        const newStudent = {
             text: {
                 name: this.registerForm.value.name || '',
-                title: this.registerForm.value.title || '',
-                contact: this.registerForm.value.contact || '',
+                //title: this.registerForm.value.title || '',
+                //contact: this.registerForm.value.contact || '',
             },
             id: 0,
             parentId: 0,
-            image: this.registerForm.value.image || '',
-            children: hasChildren ? node.children : [],
+            //image: this.registerForm.value.image || '',
+            //children: hasChildren ? node.children : [],
         };
 
-        node.children = [newEmployee];
+        node.children = nodeChildren.push(newStudent);
 
         this.modalRef.hide();
 
         this.displayChart = false;
         this.treant.destroy();
-
+        this.basicPopoverData = [this.basicPopoverData[0]].concat(this.nodes); //HACK
         setTimeout(() => {
             this.displayChart = true;
         });
@@ -138,7 +140,7 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
             });
 
             const unflattenNodes = this.flatNodes[0];
-            unflattenNodes.children = this.unflatten(this.flatNodes);
+            unflattenNodes.children = this.svc.unflatten(this.flatNodes);
 
             this.basicPopoverData.nodeStructure = unflattenNodes;
         });
@@ -147,7 +149,7 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     }
 
     onClick(obj): void {
-        console.log('onClick: ', obj);
+        console.log('onClick: ', obj.node);
     }
 
     onUpdate(obj): void {
@@ -257,39 +259,12 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
             });
 
             const unflattenNodes = this.flatNodes[0];
-            unflattenNodes.children = this.unflatten(this.flatNodes);
+            unflattenNodes.children = this.svc.unflatten(this.flatNodes);
 
             this.basicPopoverData.nodeStructure = unflattenNodes;
         });
 
         console.log('nodes: ', this.nodes);
         console.log('flatNodes: ', this.flatNodes);
-    }
-
-    private unflatten(arr) {
-        var tree = [],
-            mappedArr = {},
-            arrElem,
-            mappedElem;
-
-        for (var i = 0, len = arr.length; i < len; i++) {
-            arrElem = arr[i];
-            mappedArr[arrElem.id] = arrElem;
-            mappedArr[arrElem.id]['children'] = [];
-        }
-
-        for (var id in mappedArr) {
-            if (mappedArr.hasOwnProperty(id)) {
-                mappedElem = mappedArr[id];
-
-                if (mappedElem.parentId) {
-                    mappedArr[mappedElem['parentId']] &&
-                        mappedArr[mappedElem['parentId']]['children'].push(mappedElem);
-                } else {
-                    tree.push(mappedElem);
-                }
-            }
-        }
-        return tree;
     }
 }
