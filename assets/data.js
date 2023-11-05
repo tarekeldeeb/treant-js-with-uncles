@@ -1,631 +1,719 @@
-    var config = {
-        container: "#basic-popover",
+var nonly = function (c) {
+    const allowed = ['text', 'name'];
+    const filtered = Object.keys(c)
+        .filter((key) => allowed.includes(key))
+        .reduce((obj, key) => {
+            obj[key] = c[key];
+            return obj;
+        }, {});
+    return filtered;
+};
+
+var config = {
+        container: '#basic-popover',
         animateOnInit: true,
-        
+
         node: {
-            collapsable: true
+            collapsable: true,
         },
         animation: {
-            nodeAnimation: "easeOutBounce",
+            nodeAnimation: 'easeOutBounce',
             nodeSpeed: 700,
-            connemuhammadrsAnimation: "bounce",
-            connemuhammadrsSpeed: 700
-        }
+            connemuhammadrsAnimation: 'bounce',
+            connemuhammadrsSpeed: 700,
+        },
     },
     allah = {
-	HTMLclass:  'wahi',
+        id: 0,
+        HTMLclass: 'wahi',
         text: {
-            name: "رب العزة",
+            name: 'رب العزة',
         },
-        image: "assets/pix/1.png"
+        image: 'assets/pix/1.png',
     },
     jebril = {
-        parent: allah,
-	HTMLclass:  'wahi',
-        text:{
-            name: "جبريل",
+        id: 1,
+        parent: allah.id,
+        HTMLclass: 'wahi',
+        text: {
+            name: 'جبريل',
         },
-        image: "assets/pix/2.png"
+        image: 'assets/pix/2.png',
     },
     muhammad = {
-        parent: jebril,
-	HTMLclass:  'wahi',
-        text:{
-            name: "رسول الله",
+        id: 2,
+        parent: jebril.id,
+        HTMLclass: 'wahi',
+        text: {
+            name: 'رسول الله',
         },
-        image: "assets/pix/3.png"
+        image: 'assets/pix/3.png',
     },
     zaid_bin_thabet = {
-        parent: muhammad,
-	HTMLclass:  'sahabi',
-	childrenDropLevel: 1,
-        text:{
-            name: "زيد بن ثابت"
-        }
+        id: 3,
+        parent: muhammad.id,
+        HTMLclass: 'sahabi',
+        childrenDropLevel: 1,
+        text: {
+            name: 'زيد بن ثابت',
+        },
     },
     ali_bin_abitaleb = {
-        parent: muhammad,
-	HTMLclass:  'sahabi',
-	childrenDropLevel: 1,
-        text:{
-            name: "علي بن أبي طالب"
-        }
+        id: 4,
+        parent: muhammad.id,
+        HTMLclass: 'sahabi',
+        childrenDropLevel: 1,
+        text: {
+            name: 'علي بن أبي طالب',
+        },
     },
     othman_bin_affan = {
-        parent: muhammad,
-	HTMLclass:  'sahabi',
-	childrenDropLevel: 1,
-        text:{
-            name: "عثمان بن عفان"
-        }
+        id: 5,
+        parent: muhammad.id,
+        HTMLclass: 'sahabi',
+        childrenDropLevel: 1,
+        text: {
+            name: 'عثمان بن عفان',
+        },
     },
     abdullah_bin_masood = {
-        parent: muhammad,
-	HTMLclass:  'sahabi',
-	childrenDropLevel: 1,
-        text:{
-            name: "عبد الله بن مسعود"
-        }
+        id:6,
+        parent: muhammad.id,
+        HTMLclass: 'sahabi',
+        childrenDropLevel: 1,
+        text: {
+            name: 'عبد الله بن مسعود',
+        },
     },
     abuldardaa = {
-        parent: muhammad,
-	    HTMLclass:  'sahabi',
-	    childrenDropLevel: 1,
-        text:{
-            name: "أبو الدرداء"
-        }
-    },		
+        id: 7,
+        parent: muhammad.id,
+        HTMLclass: 'sahabi',
+        childrenDropLevel: 1,
+        text: {
+            name: 'أبو الدرداء',
+        },
+    },
     obay_bin_kaab = {
-        parent: muhammad,
-	HTMLclass:  'sahabi',
-        text:{
-            name: "أبي بن كعب"
+        id: 8,
+        parent: muhammad.id,
+        HTMLclass: 'sahabi',
+        text: {
+            name: 'أبي بن كعب',
         },
     },
     abo_mosa_alashaari = {
-        parent: muhammad,
-	HTMLclass:  'sahabi',
-	childrenDropLevel: 1,
-        text:{
-            name: "أبو موسى الأشعري"
+        id: 9,
+        parent: muhammad.id,
+        HTMLclass: 'sahabi',
+        childrenDropLevel: 1,
+        text: {
+            name: 'أبو موسى الأشعري',
         },
     },
     zir_bin_hubaish = {
-        parent: abdullah_bin_masood,
-	    HTMLclass:  'tabei',
-        uncles: [ali_bin_abitaleb],
-        text:{
-            name: "زر بن حبيش"
-        }
+        id:10,
+        parent: abdullah_bin_masood.id,
+        HTMLclass: 'tabei',
+        uncles: [nonly(ali_bin_abitaleb)],
+        text: {
+            name: 'زر بن حبيش',
+        },
     },
     eldoali = {
-        parent: ali_bin_abitaleb,
-	HTMLclass:  'tabei',
-        text:{
-            name: "أبو الأسود الدؤلي"
-        }
-    },	
+        id:11,
+        parent: ali_bin_abitaleb.id,
+        HTMLclass: 'tabei',
+        text: {
+            name: 'أبو الأسود الدؤلي',
+        },
+    },
     abo_horaira = {
-        parent: obay_bin_kaab,
-	HTMLclass:  'sahabi',
-        text:{
-            name: "أبو هريرة"
-        }
+        id:12,
+        parent: obay_bin_kaab.id,
+        HTMLclass: 'sahabi',
+        text: {
+            name: 'أبو هريرة',
+        },
     },
     abdullah_bin_abbas = {
-        parent: obay_bin_kaab,
-	uncles: [zaid_bin_thabet],
-	HTMLclass:  'sahabi',
-        text:{
-            name: "عبد الله بن عباس"
-        }
+        id: 13,
+        parent: obay_bin_kaab.id,
+        uncles: [nonly(zaid_bin_thabet)],
+        HTMLclass: 'sahabi',
+        text: {
+            name: 'عبد الله بن عباس',
+        },
     },
-	derbas_mawla_bin_abbas = {
-        parent: abdullah_bin_abbas,
-	HTMLclass:  'tabei',
-        text:{
-            name: "درباس مولى بن عباس"
-        }
+    derbas_mawla_bin_abbas = {
+        id: 14,
+        parent: abdullah_bin_abbas.id,
+        HTMLclass: 'tabei',
+        text: {
+            name: 'درباس مولى بن عباس',
+        },
     },
     abdullah_bin_abi_ayyash = {
-        parent: obay_bin_kaab,
-	HTMLclass: 'sahabi',
-        text:{
-            name: "عبد الله بن أبي عياش"
-        }
-    },	
+        id:15,
+        parent: obay_bin_kaab.id,
+        HTMLclass: 'sahabi',
+        text: {
+            name: 'عبد الله بن أبي عياش',
+        },
+    },
     abdullah_elsulami = {
-        parent: ali_bin_abitaleb,
-        uncles: [obay_bin_kaab, abdullah_bin_masood, othman_bin_affan, zaid_bin_thabet],
-	childrenDropLevel: 0,
-	HTMLclass: 'tabei',
-        text:{
-            name: "أبو عبد الرحمن السُلمي"
-        }
-    },	
+        id:16,
+        parent: ali_bin_abitaleb.id,
+        uncles: [
+            nonly(obay_bin_kaab),
+            nonly(abdullah_bin_masood),
+            nonly(othman_bin_affan),
+            nonly(zaid_bin_thabet),
+        ],
+        childrenDropLevel: 0,
+        HTMLclass: 'tabei',
+        text: {
+            name: 'أبو عبد الرحمن السُلمي',
+        },
+    },
     saad_elshaibany = {
-        parent: abdullah_bin_masood,
-	HTMLclass: 'tabei',
-        text:{
-            name: "سعد بن إياس الشيباني"
+        id: 17,
+        parent: abdullah_bin_masood.id,
+        HTMLclass: 'tabei',
+        text: {
+            name: 'سعد بن إياس الشيباني',
         },
     },
     assem = {
-        parent: abdullah_elsulami,
-	childrenDropLevel: 2,
-	HTMLclass: 'qari7',
-        text:{
-            name: "عاصم بن أبي النجود"
-        }
+        id: 18,
+        parent: abdullah_elsulami.id,
+        childrenDropLevel: 2,
+        HTMLclass: 'qari7',
+        text: {
+            name: 'عاصم بن أبي النجود',
+        },
     },
     hafs = {
-        parent: assem,
-	HTMLclass: 'rawi',
-        text:{
-            name: "حفص"
-        }
-    },	
+        id: 19,
+        parent: assem.id,
+        HTMLclass: 'rawi',
+        text: {
+            name: 'حفص',
+        },
+    },
     shoba = {
-        parent: assem,
-	HTMLclass: 'rawi',
-        text:{
-            name: "شعبة"
+        id:20,
+        parent: assem.id,
+        HTMLclass: 'rawi',
+        text: {
+            name: 'شعبة',
         },
     },
-	alaaraj = {
-        parent: abo_horaira,
-	    HTMLclass:  'tabei',
+    alaaraj = {
+        id: 21,
+        parent: abo_horaira.id,
+        HTMLclass: 'tabei',
         childrenDropLevel: 1,
-        uncles: [abdullah_bin_abbas, abdullah_bin_abi_ayyash],
-        text:{
-            name: "الأعرج"
+        uncles: [nonly(abdullah_bin_abbas), nonly(abdullah_bin_abi_ayyash)],
+        text: {
+            name: 'الأعرج',
         },
     },
-	abo_gaafar_almadani_pseudo = {
-        parent: abdullah_bin_abbas,
-	childrenDropLevel: 0,
-		pseudo: true,
+    abo_gaafar_almadani_pseudo = {
+        id: 22,
+        parent: abdullah_bin_abbas.id,
+        childrenDropLevel: 0,
+        pseudo: true,
     },
-	abo_gaafar_almadani = {
-        parent: abo_gaafar_almadani_pseudo,
-	    HTMLclass:  'qari10',
-        uncles:[abdullah_bin_abi_ayyash, abo_horaira],
-	    childrenDropLevel: 2,
-        text:{
-            name: "أبو جعفر المدني"
+    abo_gaafar_almadani = {
+        id: 23,
+        parent: abo_gaafar_almadani_pseudo.id,
+        HTMLclass: 'qari10',
+        uncles: [nonly(abdullah_bin_abi_ayyash), nonly(abo_horaira)],
+        childrenDropLevel: 2,
+        text: {
+            name: 'أبو جعفر المدني',
         },
     },
-	ibn_werdan = {
-        parent: abo_gaafar_almadani,
-	HTMLclass:  'rawi',
-        text:{
-            name: "ابن وردان"
+    ibn_werdan = {
+        id: 24,
+        parent: abo_gaafar_almadani.id,
+        HTMLclass: 'rawi',
+        text: {
+            name: 'ابن وردان',
         },
     },
-	ibn_jumaz = {
-        parent: abo_gaafar_almadani,
-	HTMLclass:  'rawi',
-        text:{
-            name: "ابن جماز"
+    ibn_jumaz = {
+        id:25,
+        parent: abo_gaafar_almadani.id,
+        HTMLclass: 'rawi',
+        text: {
+            name: 'ابن جماز',
         },
     },
-	nafee = {
-        parent: alaaraj,
-	childrenDropLevel: 1,
-    uncles: [abo_gaafar_almadani],
-	HTMLclass:  'qari7',
-        text:{
-            name: "نافع المدني"
+    nafee = {
+        id:26,
+        parent: alaaraj.id,
+        childrenDropLevel: 1,
+        uncles: [nonly(abo_gaafar_almadani)],
+        HTMLclass: 'qari7',
+        text: {
+            name: 'نافع المدني',
         },
     },
-	qaloon = {
-        parent: nafee,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "قالون"
+    qaloon = {
+        id: 27,
+        parent: nafee.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'قالون',
         },
     },
-	warsh = {
-        parent: nafee,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "ورش"
+    warsh = {
+        id: 28,
+        parent: nafee.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'ورش',
         },
     },
-	ibn_katheer = {
-        parent: derbas_mawla_bin_abbas,
-	childrenDropLevel: 1,
-	HTMLclass:  'qari7',
-        text:{
-            name: "ابن كثير المكي"
+    ibn_katheer = {
+        id: 29,
+        parent: derbas_mawla_bin_abbas.id,
+        childrenDropLevel: 1,
+        HTMLclass: 'qari7',
+        text: {
+            name: 'ابن كثير المكي',
         },
     },
-	ahmad_alnabbal = {
-        parent: ibn_katheer,
-        text:{
-            name: "أحمد النبال"
-        },
-    },	
-	konbol = {
-        parent: ahmad_alnabbal,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "قنبل"
+    ahmad_alnabbal = {
+        id: 30,
+        parent: ibn_katheer.id,
+        text: {
+            name: 'أحمد النبال',
         },
     },
-	ekrema_bin_soliman = {
-        parent: ibn_katheer,
-        text:{
-            name: "عكرمة بن سليمان"
+    konbol = {
+        id: 31,
+        parent: ahmad_alnabbal.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'قنبل',
         },
     },
-	albazzei = {
-        parent: ekrema_bin_soliman,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "البزي"
+    ekrema_bin_soliman = {
+        id: 32,
+        parent: ibn_katheer.id,
+        text: {
+            name: 'عكرمة بن سليمان',
         },
     },
-	saeed_bin_jubair = {
-        parent: abdullah_bin_abbas,
-	HTMLclass:  'tabei',
-        text:{
-            name: "سعيد بن جبير"
+    albazzei = {
+        id: 33,
+        parent: ekrema_bin_soliman.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'البزي',
         },
     },
-	abi_amr = {
-        parent: saeed_bin_jubair,
-	HTMLclass:  'qari7',
-	childrenDropLevel: 1,
-        text:{
-            name: "أبي عمرو البصري"
+    saeed_bin_jubair = {
+        id: 34,
+        parent: abdullah_bin_abbas.id,
+        HTMLclass: 'tabei',
+        text: {
+            name: 'سعيد بن جبير',
+        },
+    },
+    abi_amr = {
+        id: 35,
+        parent: saeed_bin_jubair.id,
+        HTMLclass: 'qari7',
+        childrenDropLevel: 1,
+        text: {
+            name: 'أبي عمرو البصري',
         },
     },
     yahia_ibn_almubarak = {
-       parent: abi_amr,
-	   text:{
-            name: "يحيى بن المبارك"
+        id: 36,
+        parent: abi_amr.id,
+        text: {
+            name: 'يحيى بن المبارك',
         },
     },
-	eldoori = {
-        parent: yahia_ibn_almubarak,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "الدوري"
+    eldoori = {
+        id: 37,
+        parent: yahia_ibn_almubarak.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'الدوري',
         },
     },
-	elsoosi = {
-        parent: yahia_ibn_almubarak,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "السوسي"
+    elsoosi = {
+        id: 38,
+        parent: yahia_ibn_almubarak.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'السوسي',
         },
     },
     almogheera_bin_abi_shehab = {
-        parent: othman_bin_affan,
-	HTMLclass:  'tabei',
-        text:{
-            name: "المغيرة بن أبي شهاب"
+        id: 39,
+        parent: othman_bin_affan.id,
+        HTMLclass: 'tabei',
+        text: {
+            name: 'المغيرة بن أبي شهاب',
         },
     },
-	ibn_amer_elshamy = {
-	HTMLclass:  'qari7',
-        parent: almogheera_bin_abi_shehab,
-        text:{
-            name: "ابن عامر الشامي"
+    ibn_amer_elshamy = {
+        id: 40,
+        HTMLclass: 'qari7',
+        parent: almogheera_bin_abi_shehab.id,
+        text: {
+            name: 'ابن عامر الشامي',
         },
     },
     yahia_bin_alharith_althammary = {
-        parent: ibn_amer_elshamy,
-        text:{
-            name: "يحيى بن الحارث الذماري"
+        id: 41,
+        parent: ibn_amer_elshamy.id,
+        text: {
+            name: 'يحيى بن الحارث الذماري',
         },
-    },			
+    },
     ayoub_bin_tameem = {
-        parent: yahia_bin_alharith_althammary,
-        text:{
-            name: "أيوب بن تميم"
+        id: 42,
+        parent: yahia_bin_alharith_althammary.id,
+        text: {
+            name: 'أيوب بن تميم',
         },
     },
     hisham_bin_ammar = {
-        parent: ayoub_bin_tameem,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "هشام"
-        },
-    },	
-	ibn_thakwan = {
-        parent: ayoub_bin_tameem,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "ابن ذكوان"
+        id: 43,
+        parent: ayoub_bin_tameem.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'هشام',
         },
     },
-	ibn_abi_laila = {
-        parent: ali_bin_abitaleb,
-	HTMLclass:  'tabei',
-        text:{
-            name: "ابن أبي ليلى"
+    ibn_thakwan = {
+        id: 44,
+        parent: ayoub_bin_tameem.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'ابن ذكوان',
         },
     },
-	alaamash = {
-        parent: abdullah_bin_masood,
-	HTMLclass:  'tabei',
-        text:{
-            name: "الأعمش"
-        },
-    },	
-	hamza = {
-        parent: alaamash,
-	    HTMLclass:  'qari7',
-        uncles: [ibn_abi_laila],
-        text:{
-            name: "حمزة الكوفي"
-        },
-    },	
-	solaim = {
-        parent: hamza,
-	childrenDropLevel: 0,
-        text:{
-            name: "سليم بن عيسى"
+    ibn_abi_laila = {
+        id: 45,
+        parent: ali_bin_abitaleb.id,
+        HTMLclass: 'tabei',
+        text: {
+            name: 'ابن أبي ليلى',
         },
     },
-	khalaf_pseudo = {
-		parent: solaim,
-		pseudo: true,
-	},	
-	khalaf = {
-        parent: khalaf_pseudo,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "خلف"
+    alaamash = {
+        id: 46,
+        parent: abdullah_bin_masood.id,
+        HTMLclass: 'tabei',
+        text: {
+            name: 'الأعمش',
         },
     },
-	khallad_pseudo = {
-		parent: solaim,
-		pseudo: true,
-	},		
-	khallad = {
-        parent: khallad_pseudo,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "خلاد"
-        },
-    },	
-	abo_yaaqoob_alazraq = {
-        parent: warsh,
-        text:{
-            name: "ابو يعقوب الأزرق"
-        },
-    },	
-	alasbahany = {
-        parent: warsh,
-        text:{
-            name: "محمد الأصبهاني"
-        },
-    },		
-	alkasaaei = {
-        parent: hamza,
-	HTMLclass:  'qari7',
-	childrenDropLevel: 1,
-        text:{
-            name: "الكسائي"
-        },
-    },	
-	abo_elharith = {
-        parent: alkasaaei,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "أبو الحارث"
+    hamza = {
+        id: 47,
+        parent: alaamash.id,
+        HTMLclass: 'qari7',
+        uncles: [nonly(ibn_abi_laila)],
+        text: {
+            name: 'حمزة الكوفي',
         },
     },
-	hafs_eldoori = {
-        parent: alkasaaei,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "الدوري"
+    solaim = {
+        id: 48,
+        parent: hamza.id,
+        childrenDropLevel: 0,
+        text: {
+            name: 'سليم بن عيسى',
         },
     },
-	omran_bin_melhan = {
-        parent: abo_mosa_alashaari,
-	HTMLclass: 'tabei',
-	childrenDropLevel: 1,
-    uncles:[abdullah_bin_abbas],
-        text:{
-            name: "عمران بن ملحان"
+    khalaf_pseudo = {
+        id: 49,
+        parent: solaim.id,
+        pseudo: true,
+    },
+    khalaf = {
+        id: 50,
+        parent: khalaf_pseudo.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'خلف',
         },
     },
-	abo_elashhab_elatared = {
-        parent: omran_bin_melhan,
-        text:{
-            name: "أبو الأشهب العطارد"
+    khallad_pseudo = {
+        id: 51,
+        parent: solaim.id,
+        pseudo: true,
+    },
+    khallad = {
+        id: 52,
+        parent: khallad_pseudo.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'خلاد',
         },
     },
-	yaaqoob_elhadrami = {
-        parent: abo_elashhab_elatared,
-	HTMLclass: 'qari10',
-	childrenDropLevel: 0,
-       text:{
-            name: "يعقوب الحضرمي"
+    abo_yaaqoob_alazraq = {
+        id: 53,
+        parent: warsh.id,
+        text: {
+            name: 'ابو يعقوب الأزرق',
         },
     },
-	rooh = {
-        parent: yaaqoob_elhadrami,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "روح"
+    alasbahany = {
+        id: 54,
+        parent: warsh.id,
+        text: {
+            name: 'محمد الأصبهاني',
         },
     },
-	rowais = {
-        parent: yaaqoob_elhadrami,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "رويس"
+    alkasaaei = {
+        id: 55,
+        parent: hamza.id,
+        HTMLclass: 'qari7',
+        childrenDropLevel: 1,
+        text: {
+            name: 'الكسائي',
         },
     },
-	khalaf_bin_hesham = {
-        parent: solaim,
-	HTMLclass: 'qari10',
-       text:{
-            name: "خلف بن هشام"
+    abo_elharith = {
+        id: 56,
+        parent: alkasaaei.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'أبو الحارث',
         },
     },
-	isaac_alwarraq = {
-        parent: khalaf_bin_hesham,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "إسحاق"
-        },
-    },	
-	edrees_alhaddad = {
-        parent: khalaf_bin_hesham,
-	HTMLclass: 'rawi',
- 
-         text:{
-            name: "إدريس"
+    hafs_eldoori = {
+        id: 57,
+        parent: alkasaaei.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'الدوري',
         },
     },
-	obaid_bin_sabbah = {
-       parent: hafs,
-       text:{
-            name: "عبيد بن الصباح"
+    omran_bin_melhan = {
+        id: 58,
+        parent: abo_mosa_alashaari.id,
+        HTMLclass: 'tabei',
+        childrenDropLevel: 1,
+        uncles: [nonly(abdullah_bin_abbas)],
+        text: {
+            name: 'عمران بن ملحان',
         },
     },
-	ahmad_elashnani = {
-       parent: obaid_bin_sabbah,
-       text:{
-            name: "الأشناني"
-        },
-    },	
-	ali_elhashemy = {
-       parent: ahmad_elashnani,
-       text:{
-            name: "علي الهاشمي"
+    abo_elashhab_elatared = {
+        id: 59,
+        parent: omran_bin_melhan.id,
+        text: {
+            name: 'أبو الأشهب العطارد',
         },
     },
-	abolhasan_bin_ghalbon = {
-       parent: ali_elhashemy,
-       text:{
-            name: "أبو الحسن بن غلبون"
+    yaaqoob_elhadrami = {
+        id: 60,
+        parent: abo_elashhab_elatared.id,
+        HTMLclass: 'qari10',
+        childrenDropLevel: 0,
+        text: {
+            name: 'يعقوب الحضرمي',
         },
     },
-	aboamr_eldani = {
-       parent: abolhasan_bin_ghalbon,
-       text:{
-            name: "أبو عمرو الداني"
+    rooh = {
+        id: 61,
+        parent: yaaqoob_elhadrami.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'روح',
         },
     },
-	abodawood_elomawi = {
-       parent: aboamr_eldani,
-       text:{
-            name: "أبو داود سليمان بن نجاح الأموي"
+    rowais = {
+        id: 62,
+        parent: yaaqoob_elhadrami.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'رويس',
         },
     },
-	abolhasan_bin_hothail = {
-       parent: abodawood_elomawi,
-       text:{
-            name: "أبو الحسن بن هذيل"
+    khalaf_bin_hesham = {
+        id: 63, 
+        parent: solaim.id,
+        HTMLclass: 'qari10',
+        text: {
+            name: 'خلف بن هشام',
         },
-    },	
-	alshatebei = {
-       parent: abolhasan_bin_hothail,
-       text:{
-            name: "الشاطبي"
+    },
+    isaac_alwarraq = {
+        id: 64,
+        parent: khalaf_bin_hesham.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'إسحاق',
         },
-    },	
-	
+    },
+    edrees_alhaddad = {
+        id: 65,
+        parent: khalaf_bin_hesham.id,
+        HTMLclass: 'rawi',
+
+        text: {
+            name: 'إدريس',
+        },
+    },
+    obaid_bin_sabbah = {
+        id: 66,
+        parent: hafs.id,
+        text: {
+            name: 'عبيد بن الصباح',
+        },
+    },
+    ahmad_elashnani = {
+        id: 67,
+        parent: obaid_bin_sabbah.id,
+        text: {
+            name: 'الأشناني',
+        },
+    },
+    ali_elhashemy = {
+        id: 68,
+        parent: ahmad_elashnani.id,
+        text: {
+            name: 'علي الهاشمي',
+        },
+    },
+    abolhasan_bin_ghalbon = {
+        id: 69,
+        parent: ali_elhashemy.id,
+        text: {
+            name: 'أبو الحسن بن غلبون',
+        },
+    },
+    aboamr_eldani = {
+        id: 70,
+        parent: abolhasan_bin_ghalbon.id,
+        text: {
+            name: 'أبو عمرو الداني',
+        },
+    },
+    abodawood_elomawi = {
+        id: 71,
+        parent: aboamr_eldani.id,
+        text: {
+            name: 'أبو داود سليمان بن نجاح الأموي',
+        },
+    },
+    abolhasan_bin_hothail = {
+        id: 72,
+        parent: abodawood_elomawi.id,
+        text: {
+            name: 'أبو الحسن بن هذيل',
+        },
+    },
+    alshatebei = {
+        id: 73,
+        parent: abolhasan_bin_hothail.id,
+        text: {
+            name: 'الشاطبي',
+        },
+    },
     chart_config = [
         config,
         allah,
-		jebril,
+        jebril,
         muhammad,
         zaid_bin_thabet,
         obay_bin_kaab,
-		abo_mosa_alashaari,
-		ali_bin_abitaleb,
-		othman_bin_affan,
-		abdullah_bin_masood,
-		abo_horaira,
+        abo_mosa_alashaari,
+        ali_bin_abitaleb,
+        othman_bin_affan,
+        abdullah_bin_masood,
+        abo_horaira,
         abuldardaa,
-		abdullah_bin_abbas,
-		abdullah_bin_abi_ayyash,
-		zir_bin_hubaish,
-		abdullah_elsulami,
-		saad_elshaibany,
-		assem,
-		hafs,
-		shoba,
-		alaaraj,
-		abo_gaafar_almadani_pseudo,
-		abo_gaafar_almadani,
-		ibn_werdan,
-		ibn_jumaz,
-		nafee,
-		qaloon,
-		warsh,
-		derbas_mawla_bin_abbas,
-		ibn_katheer,
-		ahmad_alnabbal,
-		konbol,
-		ekrema_bin_soliman,
-		albazzei,
-		eldoali,
-		saeed_bin_jubair,
-		abi_amr,
-		yahia_ibn_almubarak,
-		eldoori,
-		elsoosi,
-		almogheera_bin_abi_shehab,
-		ibn_amer_elshamy,
-		hisham_bin_ammar,
-		ibn_thakwan,
-		ibn_abi_laila,
-		alaamash,
-		hamza,
-		solaim,
-		khalaf_pseudo,
-		khallad_pseudo,
-		khalaf,
-		khallad,
-		yahia_bin_alharith_althammary,
-		ayoub_bin_tameem,
-		abo_yaaqoob_alazraq,
-		alasbahany,
-		alkasaaei,
-		abo_elharith,
-		hafs_eldoori,
-		omran_bin_melhan,
-		abo_elashhab_elatared,
-		yaaqoob_elhadrami,
-		rooh,
-		rowais,
-		khalaf_bin_hesham,
-		isaac_alwarraq,
-		edrees_alhaddad,
-		obaid_bin_sabbah ,
-		ahmad_elashnani ,	
-		ali_elhashemy,
-		abolhasan_bin_ghalbon,
-		aboamr_eldani, 
-		abodawood_elomawi,
-		abolhasan_bin_hothail,	
-		alshatebei, 		
+        abdullah_bin_abbas,
+        abdullah_bin_abi_ayyash,
+        zir_bin_hubaish,
+        abdullah_elsulami,
+        saad_elshaibany,
+        assem,
+        hafs,
+        shoba,
+        alaaraj,
+        abo_gaafar_almadani_pseudo,
+        abo_gaafar_almadani,
+        ibn_werdan,
+        ibn_jumaz,
+        nafee,
+        qaloon,
+        warsh,
+        derbas_mawla_bin_abbas,
+        ibn_katheer,
+        ahmad_alnabbal,
+        konbol,
+        ekrema_bin_soliman,
+        albazzei,
+        eldoali,
+        saeed_bin_jubair,
+        abi_amr,
+        yahia_ibn_almubarak,
+        eldoori,
+        elsoosi,
+        almogheera_bin_abi_shehab,
+        ibn_amer_elshamy,
+        hisham_bin_ammar,
+        ibn_thakwan,
+        ibn_abi_laila,
+        alaamash,
+        hamza,
+        solaim,
+        khalaf_pseudo,
+        khallad_pseudo,
+        khalaf,
+        khallad,
+        yahia_bin_alharith_althammary,
+        ayoub_bin_tameem,
+        abo_yaaqoob_alazraq,
+        alasbahany,
+        alkasaaei,
+        abo_elharith,
+        hafs_eldoori,
+        omran_bin_melhan,
+        abo_elashhab_elatared,
+        yaaqoob_elhadrami,
+        rooh,
+        rowais,
+        khalaf_bin_hesham,
+        isaac_alwarraq,
+        edrees_alhaddad,
+        obaid_bin_sabbah,
+        ahmad_elashnani,
+        ali_elhashemy,
+        abolhasan_bin_ghalbon,
+        aboamr_eldani,
+        abodawood_elomawi,
+        abolhasan_bin_hothail,
+        alshatebei,
     ];
 
 export default chart_config;
-
