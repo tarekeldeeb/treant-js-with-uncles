@@ -5,7 +5,6 @@ import * as mydata from '../../assets/data.js';
     providedIn: 'root',
 })
 export class DemoAppService {
-
     constructor() {}
 
     getBasicPopoverData(): any {

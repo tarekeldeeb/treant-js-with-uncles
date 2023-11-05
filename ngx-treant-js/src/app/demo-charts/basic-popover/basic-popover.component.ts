@@ -28,6 +28,7 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     basicPopoverData;
 
     displayChart = true;
+    uploadable = false;
 
     private node;
     private tree;
@@ -73,13 +74,21 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     get f() {
         return this.registerForm.controls;
     }
+    findNodeByTextName(textName){
+        return this.basicPopoverData.find((n) => !!n.text && n.text.name == textName);
+    }
 
     onSubmit() {
-        
         //(window as any).tree.addNode({'id':this.node.id}, {'text':{'name':"TESTT"}});
         const node = this.nodes.find((n) => n.id == this.node.id);
         const hasChildren = !!node.children && !!node.children.length;
-        let nodeChildren = (hasChildren)? node.children:[];
+        let nodeChildren = hasChildren ? node.children.map(c => {
+            let index = c;
+            while(this.nodes[index].pseudo){
+                index = this.nodes[index].children[0];
+            }
+            return this.findNodeByTextName(this.nodes[index].text.name)
+            }) : [];
         const newStudent = {
             text: {
                 name: this.registerForm.value.name || '',
@@ -88,9 +97,9 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
             parentId: 0,
         };
         nodeChildren.push(newStudent);
-        const dataNode = this.basicPopoverData.find(n => !!n.text && n.text.name == this.node.text.name );
-        if(dataNode){
-            dataNode["children"] = nodeChildren;
+        const dataNode = this.findNodeByTextName(this.node.text.name);
+        if (dataNode) {
+            dataNode['children'] = nodeChildren;
             this.basicPopoverData.push(newStudent);
         }
 
@@ -101,6 +110,7 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
 
         setTimeout(() => {
             this.displayChart = true;
+            this.uploadable = true;
         });
 
         console.log(this.registerForm.value);
@@ -175,5 +185,10 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
         });
 
         console.log('nodes: ', this.nodes);
+    }
+
+    upload(): void {
+        //TOOD
+        console.log("Uploading ..")
     }
 }

@@ -1,7 +1,41 @@
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0; direction:rtl;font-family: "Amiri"; font-size: 16px;}
-.container{max-width: 100%;}
-label{float: inline-start;}
-.modal-header .close{margin:-1rem auto -1rem -1rem}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: 'Amiri';
+    font-size: 16px;
+}
+.container {
+    max-width: 100%;
+}
+label {
+    float: inline-start;
+}
+.modal-header .close {
+    margin: -1rem auto -1rem -1rem;
+}
 .instructions {
     display: block;
     text-align: right;
@@ -12,37 +46,100 @@ label{float: inline-start;}
     position: absolute;
     border-radius: 10px;
 }
-fieldset,img { border:0; }
-address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
-caption,th { text-align:right; }
-h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
-q:before,q:after { content:''; }
-abbr,acronym { border:0; }
-
-body { background: #fff; }
-/* optional Container STYLES */
-.basic-popover-chart {
-    margin: 5px; width: 1650px;
+fieldset,
+img {
+    border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+caption,
+th {
+    text-align: right;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+q:before,
+q:after {
+    content: '';
+}
+abbr,
+acronym {
+    border: 0;
 }
 
+body {
+    background: #fff;
+}
+/* optional Container STYLES */
+.basic-popover-chart {
+    margin: 5px;
+    width: 1650px;
+}
 
 /* optional Container STYLES */
-.chart { margin: 5px; width: 1860px; }
-.Treant > .node { padding: 3px; border: 1px solid #484848; border-radius: 3px;  background-color: #FFF;}
-.Treant > .node img { width: 30px; height: 30px; float:right; }
+.chart {
+    margin: 5px;
+    width: 1860px;
+}
+.Treant > .node {
+    padding: 3px;
+    border: 1px solid #484848;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.Treant > .node img {
+    width: 30px;
+    height: 30px;
+    float: right;
+}
 
-.Treant .collapse-switch { width: 100%; height: 100%; border: none; }
-.Treant .node.collapsed { background-color: #DEF82D !important; }
-.Treant .node.collapsed .collapse-switch { background: none; }
+.Treant .collapse-switch {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.Treant .node.collapsed {
+    background-color: #def82d !important;
+}
+.Treant .node.collapsed .collapse-switch {
+    background: none;
+}
 
-.wahi   { background-color: #96f794 !important;}
-.sahabi { background-color: #baffc1 !important;}
-.tabei  { background-color: #f7ffba !important;}
-.qari7  { background-color: #a8d5f7 !important;}
-.qari10 { background-color: #c4e6ff !important;}
-.rawi   { background-color: #f7e1e5 !important;}
-
-
+.wahi {
+    background-color: #96f794 !important;
+}
+.sahabi {
+    background-color: #baffc1 !important;
+}
+.tabei {
+    background-color: #f7ffba !important;
+}
+.qari7 {
+    background-color: #a8d5f7 !important;
+}
+.qari10 {
+    background-color: #c4e6ff !important;
+}
+.rawi {
+    background-color: #f7e1e5 !important;
+}
 
 .Treant > p {
     font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
@@ -67,4 +164,20 @@ body { background: #fff; }
     z-index: 9999;
     text-align: center;
     min-width: 75px;
+}
+
+.upload-button {
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    font-size: large;
+    padding: 15px;
+    background: #007BFF;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 3px 6px 12px -2px black;
+}
+.upload-button:hover{
+    border: 1px solid black;
+
 }

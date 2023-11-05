@@ -8,23 +8,20 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BasicPopoverComponent } from './demo-charts/basic-popover/basic-popover.component';
 import { NgxTreantJsModule } from '@ahmed757/ngx-treant-js';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 //import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        BasicPopoverComponent,
-    ],
+    declarations: [AppComponent, BasicPopoverComponent],
     imports: [
         BrowserModule,
-  //      MatIconModule,
+        //      MatIconModule,
         AppRoutingModule,
         NgxTreantJsModule,
         ReactiveFormsModule,
         ModalModule.forRoot(),
     ],
-    providers: [{provide : LocationStrategy , useClass: HashLocationStrategy}],
+    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

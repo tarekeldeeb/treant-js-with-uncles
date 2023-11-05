@@ -3,9 +3,9 @@
         يمكنك إضافة إجازتك للقران لهذا المشروع عن طريق: <br />
         <ol style="padding: 10px 20px 0 0;">
             <li>اختيار أخفض فرع تحت الراوي</li>
-            <li>انقر على أضف قارئ ثم املأ بياناتك</li>
+            <li>انقر على أضف تلميذا ثم املأ البيانات</li>
             <li>انقر على ارفع البيانات بعد التأكد من صحتها</li>
-            <li>سيظهر رابط بطلبك، سيتم مراجعته ثم نشره  خلال 3 ايام عمل ان شاء الله</li>
+            <li>سيظهر رابط بطلبك، وسيتم مراجعته ثم نشره خلال 3 ايام عمل ان شاء الله</li>
         </ol>
     </div>
 
@@ -13,18 +13,18 @@
         مفتاح الشجرة: <br /><br />
         <table style="width: 100%;">
             <tr>
-              <td>
-                <div class="wahi">كل متصل بوحي</div>
-                <div class="sahabi">صحابي</div>
-                <div class="tabei">تابعي</div>
-              </td>
-              <td>
-                <div class="qari7">القرّاء السبعة</div>
-                <div class="qari10">تتمة القرّاء العشرة</div>
-                <div class="rawi">راوي</div>
-              </td>
+                <td>
+                    <div class="wahi">كل متصل بوحي</div>
+                    <div class="sahabi">صحابي</div>
+                    <div class="tabei">تابعي</div>
+                </td>
+                <td>
+                    <div class="qari7">القرّاء السبعة</div>
+                    <div class="qari10">تتمة القرّاء العشرة</div>
+                    <div class="rawi">راوي</div>
+                </td>
             </tr>
-          </table>
+        </table>
     </div>
 
     <ngx-treant-chart
@@ -42,11 +42,17 @@
         (loadedTreant)="onLoadTreant($event)"
     >
     </ngx-treant-chart>
+
+    <button type="button" class="upload-button" *ngIf="uploadable" aria-label="Upload" (click)="upload()">
+        <span>ارفع البانات</span>
+    </button>
+    
+
 </div>
 
 <ng-template #template>
     <div class="modal-header">
-        <h4 class="modal-title pull-left">أضف إجازتك</h4>
+        <h4 class="modal-title pull-left">أضف تلميذا</h4>
         <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
             <span aria-hidden="true">&times;</span>
         </button>
