@@ -72,7 +72,6 @@
     "dependencies": {
         "@ahmed757/ngx-treant-js": "^1.0.4",
         "@angular/animations": "~9.0.7",
-        "@angular/cdk": "^16.2.10",
         "@angular/common": "~9.0.7",
         "@angular/compiler": "~9.0.7",
         "@angular/core": "~9.0.7",
