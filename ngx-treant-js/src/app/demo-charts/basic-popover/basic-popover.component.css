@@ -46,6 +46,21 @@ label {
     position: absolute;
     border-radius: 10px;
 }
+.instructions > table{
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+.instructions td {
+    text-align: center; 
+    vertical-align: middle;
+    border: solid grey 1px;
+    border-radius: 5px;
+}
+.instructions td > div {
+    border-radius: 5px;
+}
 fieldset,
 img {
     border: 0;

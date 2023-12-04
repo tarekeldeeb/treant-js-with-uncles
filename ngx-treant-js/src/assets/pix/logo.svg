@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1200pt"
+   height="1200pt"
+   version="1.1"
+   viewBox="0 0 1200 1200"
+   id="svg1714"
+   sodipodi:docname="noun-archive-21032.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1718" />
+  <sodipodi:namedview
+     id="namedview1716"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="0.526875"
+     inkscape:cx="801.89798"
+     inkscape:cy="801.89798"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="3191"
+     inkscape:window-y="702"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1714" />
+  <g
+     id="g1712"
+     style="fill:#ffffff">
+    <path
+       d="m1123.3 508.6c1.0078-2.6992 1.7383-5.5664 1.7383-8.6055h-10.344z"
+       id="path1704"
+       style="fill:#ffffff" />
+    <path
+       d="m1125 439.65v-114.64c0-13.812-11.184-24.996-24.996-24.996h-50.004v-75c0-13.824-11.184-25.008-24.996-25.008l-50.004-0.003906v-75c0-13.809-11.184-24.992-24.996-24.992h-225c-6.6484 0-12.996 2.6406-17.688 7.3203l-67.668 67.68h-389.65c-13.824 0-24.996 11.184-24.996 24.996v75h-50.004c-13.824 0-24.996 11.184-24.996 25.008v75h-50.004c-13.824 0-24.996 11.184-24.996 24.996v45.742l-75 68.172v586.08h1200v-585.35zm-850-214.64h375c6.6367 0 12.996-2.6406 17.676-7.3203l67.68-67.68h189.65v49.992l-125-0.003906c-6.6484 0-12.996 2.6406-17.688 7.3203l-67.68 67.68h-439.63zm-75 99.996h525c6.6367 0 12.984-2.6406 17.676-7.3203l67.68-67.68h189.65v50.004h-125c-6.6484 0-12.996 2.6406-17.688 7.3203l-67.68 67.68h-589.63zm-75 150v-50.004h675c6.6367 0 12.984-2.6406 17.676-7.3203l67.68-67.68h189.65v125zm1025 575h-1100v-500h1100v500z"
+       id="path1706"
+       style="fill:#ffffff" />
+    <path
+       d="m525 929.7c-44.746-25.98-75-74.316-75-129.7 0-65.184 41.844-120.6 99.996-141.25v16.262l75-50.004-75-50.004v31.598c-86.113 22.262-150 100.39-150 193.4 0 83.746 51.805 155.52 125 185.26z"
+       id="path1708"
+       style="fill:#ffffff" />
+    <path
+       d="m650 606.59v52.152c58.152 20.664 99.996 76.078 99.996 141.25 0 74.172-54.18 135.79-125 147.76v-22.754l-75 50.004 50.004 33.285 24.996 16.703v-26.746c98.484-12.348 175-96.434 175-198.25 0.011718-93.012-63.875-171.14-149.99-193.4z"
+       id="path1710"
+       style="fill:#ffffff" />
+  </g>
+</svg>
