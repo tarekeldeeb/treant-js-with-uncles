@@ -133,11 +133,12 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     }
 
     onHover(event): void {
-        setTimeout(() => {
-            event.$('.popover-title').text(event.node.text.name);
-        }, 100);
+        if(event.node.nodeHTMLclass.trim().match(/^(?:rawi|subrawi)$/)){
+            setTimeout(() => {
+                event.$('.popover-title').text(event.node.text.name);
+            }, 100);
 
-        event
+            event
             .$('.popover')
             .off('click')
             .on('click', '#add', (e) => {
@@ -149,6 +150,9 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
                 e.preventDefault();
                 e.stopPropagation();
             });
+        } else {
+            event.$('.popover').popover('hide');
+        }
     }
 
     onLoadTree(tree): void {
