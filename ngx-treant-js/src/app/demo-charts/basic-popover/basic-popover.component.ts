@@ -60,6 +60,7 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     ) {
         svc = new DemoAppService();
         this.basicPopoverData = svc.getBasicPopoverData();
+        console.log("Starting with >\n"+ JSON.stringify(this.basicPopoverData));
     }
 
     ngAfterViewInit() {

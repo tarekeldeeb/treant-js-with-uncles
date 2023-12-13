@@ -1,7 +1,7 @@
 {
-    "name": "angular-treant-demo",
-    "version": "0.0.0",
-    "author": "Ahmed Alatawi (aalat001@gmail.com)",
+    "name": "quran-team",
+    "version": "0.1.0",
+    "author": "Tarek Eldeeb",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
