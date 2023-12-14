@@ -1,51 +1,43 @@
 import { Injectable } from '@angular/core';
-import * as mydata from '../../assets/data.js';
+import * as top from '../../assets/top.js';
+import * as hafs from '../../assets/hafs.js';
+import * as warsh from '../../assets/warsh.js';
 
 @Injectable({
     providedIn: 'root',
 })
 export class DemoAppService {
-    constructor() {}
 
-    getBasicPopoverData(): any {
-        return mydata.default;
+    private config: any = [];
+
+    constructor() {
+        this.config = [{
+            container: '#basic-popover',
+            animateOnInit: true,
+    
+            node: {
+                collapsable: true,
+            },
+            animation: {
+                nodeAnimation: 'easeOutBounce',
+                nodeSpeed: 700,
+                connectorsAnimation: 'bounce',
+                connectorsSpeed: 700,
+            },
+        }];
     }
 
-    flattenItems(items, key): any {
-        return items.reduce((flattenedItems, item) => {
-            flattenedItems.push(item);
-            if (Array.isArray(item[key])) {
-                flattenedItems = flattenedItems.concat(this.flattenItems(item[key], key));
-                // delete item[key]
-            }
-            return flattenedItems;
-        }, []);
-    }
-
-    unflatten(arr): any {
-        var tree = [],
-            mappedArr = {},
-            arrElem,
-            mappedElem;
-
-        for (var i = 0, len = arr.length; i < len; i++) {
-            arrElem = arr[i];
-            mappedArr[arrElem.id] = arrElem;
-            mappedArr[arrElem.id]['children'] = [];
+    getBasicPopoverData(treeName="hafs"): any {
+        switch (treeName) {
+            case 'top':
+                return this.config.concat(top.default);
+            case 'hafs':
+                return this.config.concat(hafs.default);
+            case 'warsh':
+                return this.config.concat(warsh.default);
+            default:
+                return this.config.concat(top.default);
         }
 
-        for (var id in mappedArr) {
-            if (mappedArr.hasOwnProperty(id)) {
-                mappedElem = mappedArr[id];
-
-                if (mappedElem.parentId) {
-                    mappedArr[mappedElem['parentId']] &&
-                        mappedArr[mappedElem['parentId']]['children'].push(mappedElem);
-                } else {
-                    tree.push(mappedElem);
-                }
-            }
-        }
-        return tree;
     }
 }

@@ -6,6 +6,7 @@ import {
     TemplateRef,
     AfterViewInit,
 } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
 import { DemoAppService } from '../demo-charts.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { FormGroup, FormBuilder } from '@angular/forms';
@@ -30,6 +31,8 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     displayChart = true;
     uploadable = false;
 
+    private tree_name;
+    private svc: DemoAppService;
     private node;
     private tree;
     private treant;
@@ -54,13 +57,11 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     };
 
     constructor(
-        private svc: DemoAppService,
+        private route: ActivatedRoute,
         private modalService: BsModalService,
         private formBuilder: FormBuilder
     ) {
-        svc = new DemoAppService();
-        this.basicPopoverData = svc.getBasicPopoverData();
-        console.log("Starting with >\n"+ JSON.stringify(this.basicPopoverData));
+        this.svc = new DemoAppService();
     }
 
     ngAfterViewInit() {
@@ -122,7 +123,9 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     }
 
     ngOnInit(): void {
-        // do something here
+        this.tree_name = this.route.snapshot.paramMap.get('id');
+        this.basicPopoverData = this.svc.getBasicPopoverData(this.tree_name);
+        console.log("Starting with >\n"+ JSON.stringify(this.basicPopoverData));
     }
 
     onClick(obj): void {

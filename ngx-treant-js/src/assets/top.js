@@ -9,21 +9,7 @@ var nonly = function (c) {
     return filtered;
 };
 
-var config = {
-        container: '#basic-popover',
-        animateOnInit: true,
-
-        node: {
-            collapsable: true,
-        },
-        animation: {
-            nodeAnimation: 'easeOutBounce',
-            nodeSpeed: 700,
-            connemuhammadrsAnimation: 'bounce',
-            connemuhammadrsSpeed: 700,
-        },
-    },
-    allah = {
+var allah = {
         id: 0,
         HTMLclass: 'wahi',
         text: {
@@ -477,20 +463,6 @@ var config = {
             name: 'خلاد',
         },
     },
-    abo_yaaqoob_alazraq = {
-        id: 53,
-        parent: warsh.id,
-        text: {
-            name: 'ابو يعقوب الأزرق',
-        },
-    },
-    alasbahany = {
-        id: 54,
-        parent: warsh.id,
-        text: {
-            name: 'محمد الأصبهاني',
-        },
-    },
     alkasaaei = {
         id: 55,
         parent: hamza.id,
@@ -549,7 +521,6 @@ var config = {
         id: 61,
         parent: yaaqoob_elhadrami.id,
         HTMLclass: 'rawi',
-
         text: {
             name: 'روح',
         },
@@ -589,64 +560,7 @@ var config = {
             name: 'إدريس',
         },
     },
-    obaid_bin_sabbah = {
-        id: 66,
-        parent: hafs.id,
-        text: {
-            name: 'عبيد بن الصباح',
-        },
-    },
-    ahmad_elashnani = {
-        id: 67,
-        parent: obaid_bin_sabbah.id,
-        text: {
-            name: 'الأشناني',
-        },
-    },
-    ali_elhashemy = {
-        id: 68,
-        parent: ahmad_elashnani.id,
-        text: {
-            name: 'علي الهاشمي',
-        },
-    },
-    abolhasan_bin_ghalbon = {
-        id: 69,
-        parent: ali_elhashemy.id,
-        text: {
-            name: 'أبو الحسن بن غلبون',
-        },
-    },
-    aboamr_eldani = {
-        id: 70,
-        parent: abolhasan_bin_ghalbon.id,
-        text: {
-            name: 'أبو عمرو الداني',
-        },
-    },
-    abodawood_elomawi = {
-        id: 71,
-        parent: aboamr_eldani.id,
-        text: {
-            name: 'أبو داود سليمان بن نجاح الأموي',
-        },
-    },
-    abolhasan_bin_hothail = {
-        id: 72,
-        parent: abodawood_elomawi.id,
-        text: {
-            name: 'أبو الحسن بن هذيل',
-        },
-    },
-    alshatebei = {
-        id: 73,
-        parent: abolhasan_bin_hothail.id,
-        text: {
-            name: 'الشاطبي',
-        },
-    },
     chart_config = [
-        config,
         allah,
         jebril,
         muhammad,
@@ -700,8 +614,6 @@ var config = {
         khallad,
         yahia_bin_alharith_althammary,
         ayoub_bin_tameem,
-        abo_yaaqoob_alazraq,
-        alasbahany,
         alkasaaei,
         abo_elharith,
         hafs_eldoori,
@@ -713,14 +625,6 @@ var config = {
         khalaf_bin_hesham,
         isaac_alwarraq,
         edrees_alhaddad,
-        obaid_bin_sabbah,
-        ahmad_elashnani,
-        ali_elhashemy,
-        abolhasan_bin_ghalbon,
-        aboamr_eldani,
-        abodawood_elomawi,
-        abolhasan_bin_hothail,
-        alshatebei,
     ];
 
 export default chart_config;
