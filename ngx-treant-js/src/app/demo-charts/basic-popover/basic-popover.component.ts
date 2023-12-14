@@ -193,7 +193,29 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     }
 
     upload(): void {
-        //TOOD
+        var newNodes = this.basicPopoverData.filter(n => n.id == 0 && n.parentId == 0).sort((a,b) => a.parentId < b.parentId);
+        // Assign new IDs
+        var max_id = Math.max(...this.basicPopoverData.map(o => o.id || 0)) + 1;
+        newNodes.forEach(function(n){
+            n.id = max_id;
+            max_id = max_id + 1;
+        });
+        // Search for parent ID, and cleanup parent
+        var affectedParents = this.basicPopoverData.filter(n => n.children && n.children.some(c => c.parentId === 0));
+        affectedParents.forEach(function(p){
+            p.children.forEach(function(c){
+                if(c.parentId === 0){
+                    //this.basicPopoverData[c.id].parentId = p.id;
+                    //delete c.parentId;
+                }
+            });
+        });
+
+        //Replace Child objects with IDs
+
+        // Cleanup _json_id keys
+
+        //Do upload to a new PR
         console.log("Uploading ..")
     }
 }
