@@ -291,6 +291,7 @@ var config = {
     ahmad_alnabbal = {
         id: 30,
         parent: ibn_katheer.id,
+        HTMLclass: 'addnochild',
         text: {
             name: 'أحمد النبال',
         },
@@ -307,6 +308,7 @@ var config = {
     ekrema_bin_soliman = {
         id: 32,
         parent: ibn_katheer.id,
+        HTMLclass: 'addnochild',
         text: {
             name: 'عكرمة بن سليمان',
         },
@@ -340,6 +342,7 @@ var config = {
     yahia_ibn_almubarak = {
         id: 36,
         parent: abi_amr.id,
+        HTMLclass: 'addnochild',
         text: {
             name: 'يحيى بن المبارك',
         },
@@ -381,6 +384,7 @@ var config = {
     yahia_bin_alharith_althammary = {
         id: 41,
         parent: ibn_amer_elshamy.id,
+        HTMLclass: 'addnochild',
         text: {
             name: 'يحيى بن الحارث الذماري',
         },
@@ -388,6 +392,7 @@ var config = {
     ayoub_bin_tameem = {
         id: 42,
         parent: yahia_bin_alharith_althammary.id,
+        HTMLclass: 'addnochild',
         text: {
             name: 'أيوب بن تميم',
         },
@@ -439,6 +444,7 @@ var config = {
         id: 48,
         parent: hamza.id,
         childrenDropLevel: 0,
+        HTMLclass: 'addnochild',
         text: {
             name: 'سليم بن عيسى',
         },
@@ -525,6 +531,7 @@ var config = {
     abo_elashhab_elatared = {
         id: 59,
         parent: omran_bin_melhan.id,
+        HTMLclass: 'addnochild',
         text: {
             name: 'أبو الأشهب العطارد',
         },

@@ -134,7 +134,7 @@ export class BasicPopoverComponent implements AfterViewInit, OnInit {
     }
 
     onHover(event): void {
-        if(event.node.nodeHTMLclass.trim().match(/^(?:rawi|subrawi)$/)){
+        if(event.node.nodeHTMLclass.trim().match(/^(?:rawi|)$/)){
             setTimeout(() => {
                 event.$('.popover-title').text(event.node.text.name);
             }, 100);
