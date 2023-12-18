@@ -9,6 +9,6 @@ and this good looking [iid-quran](http://www.iid-quran.com) site. Treant-JS has 
 ![Sanad-Quran-Tree](https://github.com/tarekeldeeb/sanad-quran/blob/main/pix/sanad-quran-image-preview.png?raw=true)
 
 ## Live link
-You can preview the project at https://quran.team
-
 For developers: Preview the main branch [here](https://raw.githack.com/tarekeldeeb/sanad-quran/main/index.html)
+
+This project is a base for https://github.com/Quran-Labs/quran.team ( https://quran.team )
