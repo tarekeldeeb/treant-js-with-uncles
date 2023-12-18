@@ -1,4 +1,4 @@
-# Quran.team
+# Quran Tree
 
 A graphical representation for teacher-student connection (Sanad) tree for the Quran.
 
